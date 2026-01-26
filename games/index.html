@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../Images/favicon.png">
+</head>
+<body>
+       <script>
+       function filterGames() {
+       let searchTerm = document.getElementById('search').value.toLowerCase();
+       let games = document.getElementsByClassName('game-box');
+    
+       for (let game of games) {
+        let gameName = game.querySelector('p').textContent.toLowerCase();
+        game.style.display = gameName.includes(searchTerm) ? "block" : "none";
+       }
+       }
+       </script>
+    <h1>All games</h1>
+    <h4>Big shoutout to sky the creator of selenite i got most of these ports from her</h4>
+<input type="search" id="search" placeholder="Search..." oninput="filterGames()">
+
+        <div class="container">
+        <a href="baldis-basics/" class="game-box">
+            <img src="../Images/icon3.png" style="width:190px;height:190px;border:0">
+            <p>Baldi's Basics</p>
+        </a>
+        <a href="btd/index.html" class="game-box">
+            <img src="../Images/icon7.jpg" style="width:190px;height:190px;border:0">
+            <p>Bloons Tower Defense</p>
+        </a>
+        <a href="Cookie-Clicker/index.html" class="game-box">
+            <img src="../Images/icon1.jpg" style="width:190px;height:190px;border:0">
+            <p>Cookie Clicker</p>
+        </a>
+        <a href="Doodle-Jump/" class="game-box">
+            <img src="../Images/icon2.png" style="width:190px;height:190px;border:0">
+            <p>Doodle Jump</p>
+        </a>
+        <a href="Doom/" class="game-box">
+            <img src="../Images/icon4.png" style="width:190px;height:190px;border:0">
+            <p>Doom</p>
+        </a>
+        <a href="hollow knight/" class="game-box">
+            <img src="../Images/icon5.jpg" style="width:190px;;height:190px;border:0">
+            <p>Hollow Knight</p>
+        </a>    
+    </div>
+    </div>
+    <div class="container">
+       <a href="Slope/" class="game-box">
+            <img src="../Images/icon6.jpg" style="width:190px;height:190px;border:0">
+            <p>Slope</p>
+        </a>
+    </div>
+    </div>
+<p>You have reached the end</p>
+</body>
+</html>
